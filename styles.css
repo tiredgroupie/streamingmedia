@@ -15,6 +15,12 @@ header {
     margin-top: 50px;
     padding-bottom: 30px;
     text-align: center;
+    background: #030A8C;
+    color: #ffffff;
+}
+
+header p {
+    color: #ffffff;
 }
 
 nav {
@@ -23,6 +29,7 @@ nav {
     top:0;
     position:absolute;
     z-index: -1;
+    list-style-type: none;
 }
 
 nav ul {
@@ -36,7 +43,7 @@ footer p {
 }
 
 h1 {
-    color: #590242;
+    color: #ffffff;
 }
 
 h2, h3 {
