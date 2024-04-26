@@ -64,7 +64,7 @@ p, dl, dd {
 }
 
 li {
-    display: block;
+    display: inline;
 }
 
 ul {
