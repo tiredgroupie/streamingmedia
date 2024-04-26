@@ -1,15 +1,52 @@
+html {
+    background-color:#020659;
+}
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
-    line-height: 1.6;
-    background-color: #020659;
-    color: #fff;
+    color: #ffffff;
+    width: 375px;
     margin: 0 auto;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+header {
+    margin-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+nav {
+    width: 375pd;
+    background-color: #030A8C;
+    top:0;
+    position:absolute;
+    z-index: -1;
+}
+
+nav ul {
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.75em;
+    text-align: center;
+    color: #590242;
 }
 
 h1 {
-    font-size: 1.5em;
+    color: #590242;
+}
+
+h2, h3 {
+    font-size: 1em;
+    color: #590242;
+}
+
+p, dl, dd {
+    font-size: 1em;
+    color: #590242;
 }
 
 ul {
@@ -17,7 +54,6 @@ ul {
     max-height: 0;
     transition: max-height .2s ease-out;
 }
-
 label {
     cursor: pointer;
     display: inline-block;
@@ -25,18 +61,16 @@ label {
     position: relative;
     user-select: none;
 }
-
-label span{
-    background-color: #fff;
+label span {
+    background-color: #ffffff;
     display: block;
     height: 2px;
     position: relative;
     transition: background-color .2s ease-out;
     width: 18px;
 }
-
 label span:before, label span:after {
-    background: #fff;
+    background: #ffffff;
     content: '';
     display: block;
     height: 100%;
@@ -44,43 +78,40 @@ label span:before, label span:after {
     transition: all .2s ease-out;
     width: 100%;
 }
-
 label span:before {
     top: 5px;
 }
-
 label span:after {
     top: -5px;
 }
-
 input {
     display: none;
 }
-
+input:checked ~ ul {
+    max-height: 500px;
+}
 input:checked ~ label span {
     background: transparent;
 }
-
 input:checked ~ label span:before {
     transform: rotate(-45deg);
 }
-
 input:checked ~ label span:after {
     transform: rotate(45deg);
 }
-
 input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
     top: 0;
 }
 
-h2, h3 {
-    font-size: 1em;
-}
-
-p, dl, dd {
-    font-size: 1em;
-}
-
-footer p {
-    font-size: 0.75em;
+@media screen and (min-width:834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
 }
